@@ -5,5 +5,7 @@ if __name__ == '__main__':
     n = int(input())
 
 
-m1 = [x for x in range(n) for y in range(n) for z in range(n)]
-print(m1)
+out_list = [[i,j,k] for i in range(x + 1)
+                    for j in range(y + 1) 
+                    for k in range(z + 1)]
+print(out_list)
