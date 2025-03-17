@@ -1,0 +1,10 @@
+A parking lot charges rupees 20 per hours for cars.
+The owner wants an automated system that calculates the parking 
+for based on the entry and exit time
+
+input
+Entry time (integer, in hours 0-24)
+Entry time (integer, in hours 0-24)
+
+Output
+Total parking fee
