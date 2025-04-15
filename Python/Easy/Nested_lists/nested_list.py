@@ -1,16 +1,17 @@
 if __name__ == '__main__':
-
-    student = []
-
+    name_li = []
+    score_li = []
+    records = []
     for _ in range(int(input())):
-        name = sorted(input())
+        name = input()
         score = float(input())
-
-    score  = sorted(set(score for name,score in student))
-    s_lowest = score[1]
-
-    name = sorted([name for name,score in student if score == s_lowest])
-
-    for s_lowest_name in name:
-        print(s_lowest_name)
-        
+        records.append([name,score])
+        name_li.append(name)
+        score_li.append(score)
+    score_li = list(set(score_li))
+    score_li.sort()
+    second_low = score_li[1]
+    res = [i[0] for i in records if i[1] == second_low]
+    res.sort()
+    for i in res:
+        print(i)
