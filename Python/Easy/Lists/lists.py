@@ -1,44 +1,20 @@
-# if __name__ == '__main__':
-#     arr_list = []
-#     N = int(input())
-
-#     # arr_list.append(1)
-#     # arr_list.append(2)
-#     # arr_list.insert(1,3)
-#     # print(arr_list)
-
-#     for i in range(N):
-
-#     #Insert of 5 in index 0
-#     print("insert 0 5")
-#     arr_list.insert(0,5)
-
-#     print("insert 1 10")
-#     arr_list.insert(1,10)
-
-#     print("insert 0 6")
-#     arr_list.insert(0,6)
-
-#     print(arr_list)
-
-#     print("remove 6")
-#     arr_list.remove(6)
-
-#     print("append 9")
-#     arr_list.append(9)
-
-#     print("append 1")
-#     arr_list.append(1)
-
-#     print("sort")
-#     arr_list.sort()
-
-#     print(arr_list)
-
-    
-#     print("pop")
-#     arr_list.pop()
-
-#     print("reverse")
-#     arr_list.reverse()
-#     print(arr_list)
+if __name__ == '__main__':
+    l1 = []
+    N = int(input())
+    for _ in range(N):
+        value = map(str,input().split())
+        value_list = list(value)
+        if value_list[0] == 'insert':
+           l1.insert(int(value_list[1]), int(value_list[2]))
+        elif value_list[0] == 'print':
+            print(l1)
+        elif value_list[0] == 'remove':
+            l1.remove(int(value_list[1]))
+        elif value_list[0] == 'append':
+            l1.append(int(value_list[1]))
+        elif value_list[0] == 'sort':
+            l1.sort()
+        elif value_list[0] == 'pop':
+            l1.pop()
+        elif value_list[0] == 'reverse':
+            l1.reverse()
